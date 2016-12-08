@@ -36,23 +36,23 @@ class DummySymbolTablesTests: XCTestCase {
 //        let minimumLength = 8
 //        for word in words {
 //            if word.characters.count <= minimumLength {
-//                if dummySymbolTable.contains(word) {
-//                    dummySymbolTable.put(key: word, value 1 + dummySymbolTable.get(key: key))
+//                if dummySymbolTable.contains(key: word) {
+//                    dummySymbolTable.put(key: word, value: 1 + dummySymbolTable.get(key: key))
 //                } else {
-//                    dummySymbolTable.put(key: word, value 1)
+//                    dummySymbolTable.put(key: word, value: 1)
 //                }
 //            }
 //            // Find a key with the highest frequency count.
 //            var maxKey   = ""
 //            var maxCount = 0
 //            for word in dummySymbolTable.keys() {
-//                let wordCount = dummySymbolTable.get(key: word)
+//                let wordCount = dummySymbolTable.get(key: word) ?? 0
 //                if wordCount > maxCount {
 //                    maxKey   = word
 //                    maxCount = wordCount
 //                }
 //            }
-//            print("Most frequent word: \(maxWord) (\(maxCount)).)
+//            print("Most frequent word: \(maxKey) (\(maxCount)).")
 //        }
 //    }
 
