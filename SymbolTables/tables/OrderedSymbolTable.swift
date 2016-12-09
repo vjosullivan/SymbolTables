@@ -10,17 +10,17 @@ import Foundation
 
 protocol OrderedSymbolTable: SymbolTable {
 
-    func min() -> Key
-    func max() -> Key
+    func min() -> Key?
+    func max() -> Key?
 
     /// Returns the **largest** key which is *less than or equal* to the given key.
     ///
-    func floor(key: Key) -> Key
+    func floor(key: Key) -> Key?
 
 
     /// Returns the **smallest** key which is *greater than or equal* to the given key.
     ///
-    func ceiling(key: Key) -> Key
+    func ceiling(key: Key) -> Key?
 
     /// Returns the number of keys that are *less* than the given key.
     ///
@@ -42,11 +42,15 @@ protocol OrderedSymbolTable: SymbolTable {
 extension OrderedSymbolTable {
 
     func deleteMin() {
-        delete(key: min())
+        if let minKey = min() {
+            delete(key: minKey)
+        }
     }
 
     func deleteMax() {
-        delete(key: max())
+        if let maxKey = max() {
+            delete(key: maxKey)
+        }
     }
 
     /// Returns the number of keys in the table between the two given keys (inclusive).

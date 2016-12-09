@@ -31,61 +31,61 @@ class SequentialSearchSymbolTableTests: XCTestCase {
 //        }
     }
 
-    func testPerformanceTiny() {
-        let words = read(filename: "TinyTale.txt")
-        let minimumLength = 3
-        for word in words {
-            if word.characters.count >= minimumLength {
-                if symbolTable.contains(key: word) {
-                    symbolTable.put(key: word, value: 1 + symbolTable.get(key: word)!)
-                } else {
-                    symbolTable.put(key: word, value: 1)
-                }
-            }
-        }
-        // Find a key with the highest frequency count.
-        var maxKey   = ""
-        var maxCount = 0
-        for word in symbolTable.keys() {
-            let wordCount = symbolTable.get(key: word) ?? 0
-            if wordCount > maxCount {
-                maxKey   = word
-                maxCount = wordCount
-            }
-        }
-        print("\n\nTinyTale: Most frequent word with a minumum length of \(minimumLength): \(maxKey) (\(maxCount) times).\n\n")
-    }
-
-    func testPerformanceTale() {
-        let words = read(filename: "Tale.txt")
-        let minimumLength = 12
-        var uniqueCount = 0
-        var searchCount = 0
-        print("Starting insertions.")
-        for word in words {
-            if word.characters.count >= minimumLength {
-                searchCount += 1
-                if symbolTable.contains(key: word) {
-                    symbolTable.put(key: word, value: 1 + symbolTable.get(key: word)!)
-                } else {
-                    symbolTable.put(key: word, value: 1)
-                    uniqueCount += 1
-                }
-            }
-        }
-        print("Completed \(uniqueCount) insertions from \(searchCount) searches.")
-        // Find a key with the highest frequency count.
-        var maxKey   = ""
-        var maxCount = 0
-        for word in symbolTable.keys() {
-            let wordCount = symbolTable.get(key: word) ?? 0
-            if wordCount > maxCount {
-                maxKey   = word
-                maxCount = wordCount
-            }
-        }
-        print("\n\nTale: Most frequent word with a minumum length of \(minimumLength): \(maxKey) (\(maxCount) times).\n\n")
-    }
+//    func testPerformanceTiny() {
+//        let words = read(filename: "TinyTale.txt")
+//        let minimumLength = 3
+//        for word in words {
+//            if word.characters.count >= minimumLength {
+//                if symbolTable.contains(key: word) {
+//                    symbolTable.put(key: word, value: 1 + symbolTable.get(key: word)!)
+//                } else {
+//                    symbolTable.put(key: word, value: 1)
+//                }
+//            }
+//        }
+//        // Find a key with the highest frequency count.
+//        var maxKey   = ""
+//        var maxCount = 0
+//        for word in symbolTable.keys() {
+//            let wordCount = symbolTable.get(key: word) ?? 0
+//            if wordCount > maxCount {
+//                maxKey   = word
+//                maxCount = wordCount
+//            }
+//        }
+//        print("\n\nTinyTale: Most frequent word with a minumum length of \(minimumLength): \(maxKey) (\(maxCount) times).\n\n")
+//    }
+//
+//    func testPerformanceTale() {
+//        let words = read(filename: "Tale.txt")
+//        let minimumLength = 12
+//        var uniqueCount = 0
+//        var searchCount = 0
+//        print("Starting insertions.")
+//        for word in words {
+//            if word.characters.count >= minimumLength {
+//                searchCount += 1
+//                if symbolTable.contains(key: word) {
+//                    symbolTable.put(key: word, value: 1 + symbolTable.get(key: word)!)
+//                } else {
+//                    symbolTable.put(key: word, value: 1)
+//                    uniqueCount += 1
+//                }
+//            }
+//        }
+//        print("Completed \(uniqueCount) insertions from \(searchCount) searches.")
+//        // Find a key with the highest frequency count.
+//        var maxKey   = ""
+//        var maxCount = 0
+//        for word in symbolTable.keys() {
+//            let wordCount = symbolTable.get(key: word) ?? 0
+//            if wordCount > maxCount {
+//                maxKey   = word
+//                maxCount = wordCount
+//            }
+//        }
+//        print("\n\nTale: Most frequent word with a minumum length of \(minimumLength): \(maxKey) (\(maxCount) times).\n\n")
+//    }
 
     func read(filename: String) -> [String] {
 
