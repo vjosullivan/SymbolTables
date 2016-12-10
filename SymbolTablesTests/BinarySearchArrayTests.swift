@@ -17,7 +17,7 @@ class BinarySearchArrayTests: XCTestCase {
         "it was the epoch of belief it was the epoch of incredulity" +
         "it was the season of light it was the season of darkness" +
     "it was the spring of hope it was the winter of despair"
-    let symbolTable = BinarySearchArrayTable()
+    let symbolTable = BinarySearchArray()
 
     override func setUp() {
         super.setUp()
