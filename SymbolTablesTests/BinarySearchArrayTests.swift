@@ -1,5 +1,5 @@
 //
-//  BinarySearchSymbolTableTests.swift
+//  BinarySearchArrayTests.swift
 //  SymbolTables
 //
 //  Created by Vincent O'Sullivan on 08/12/2016.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import SymbolTables
 
-class BinarySearchSymbolTableTests: XCTestCase {
+class BinarySearchArrayTests: XCTestCase {
 
     let keys = "SEARCHEXAMPLE".characters.map { String($0) }
     let tinyText = "it was the best of times it was the worst of times" +
@@ -17,7 +17,7 @@ class BinarySearchSymbolTableTests: XCTestCase {
         "it was the epoch of belief it was the epoch of incredulity" +
         "it was the season of light it was the season of darkness" +
     "it was the spring of hope it was the winter of despair"
-    let symbolTable = BinarySearchSymbolTable()
+    let symbolTable = BinarySearchArrayTable()
 
     override func setUp() {
         super.setUp()

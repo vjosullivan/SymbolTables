@@ -15,8 +15,8 @@
 		F135BF661DF76CA70076B34C /* SymbolTablesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135BF651DF76CA70076B34C /* SymbolTablesTests.swift */; };
 		F135BF731DF76CE60076B34C /* OrderedSymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135BF711DF76CE60076B34C /* OrderedSymbolTable.swift */; };
 		F135BF741DF76CE60076B34C /* SymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135BF721DF76CE60076B34C /* SymbolTable.swift */; };
-		F16A810B1DF95A3B00C52347 /* BinarySearchSymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A810A1DF95A3B00C52347 /* BinarySearchSymbolTable.swift */; };
-		F16A810D1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A810C1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift */; };
+		F16A810B1DF95A3B00C52347 /* BinarySearchArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A810A1DF95A3B00C52347 /* BinarySearchArray.swift */; };
+		F16A810D1DF95C4100C52347 /* BinarySearchArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A810C1DF95C4100C52347 /* BinarySearchArrayTests.swift */; };
 		F1A37E311DF83EC1004864F9 /* TinyTale.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1A37E301DF83EC1004864F9 /* TinyTale.txt */; };
 		F1A37E331DF8413E004864F9 /* Tale.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1A37E321DF8413E004864F9 /* Tale.txt */; };
 		F1A37E351DF861DB004864F9 /* SequentialSearchSymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37E341DF861DB004864F9 /* SequentialSearchSymbolTable.swift */; };
@@ -46,8 +46,8 @@
 		F135BF671DF76CA70076B34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F135BF711DF76CE60076B34C /* OrderedSymbolTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSymbolTable.swift; sourceTree = "<group>"; };
 		F135BF721DF76CE60076B34C /* SymbolTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
-		F16A810A1DF95A3B00C52347 /* BinarySearchSymbolTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchSymbolTable.swift; sourceTree = "<group>"; };
-		F16A810C1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchSymbolTableTests.swift; sourceTree = "<group>"; };
+		F16A810A1DF95A3B00C52347 /* BinarySearchArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchArray.swift; sourceTree = "<group>"; };
+		F16A810C1DF95C4100C52347 /* BinarySearchArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchArrayTests.swift; sourceTree = "<group>"; };
 		F1A37E301DF83EC1004864F9 /* TinyTale.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TinyTale.txt; sourceTree = "<group>"; };
 		F1A37E321DF8413E004864F9 /* Tale.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tale.txt; sourceTree = "<group>"; };
 		F1A37E341DF861DB004864F9 /* SequentialSearchSymbolTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialSearchSymbolTable.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				F135BF711DF76CE60076B34C /* OrderedSymbolTable.swift */,
 				F135BF721DF76CE60076B34C /* SymbolTable.swift */,
 				F1A37E341DF861DB004864F9 /* SequentialSearchSymbolTable.swift */,
-				F16A810A1DF95A3B00C52347 /* BinarySearchSymbolTable.swift */,
+				F16A810A1DF95A3B00C52347 /* BinarySearchArray.swift */,
 				34A9272B1DFB0958009DB329 /* RedBlackTree.swift */,
 			);
 			path = tables;
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A37E361DF86A2D004864F9 /* SequentialSearchSymbolTableTests.swift */,
-				F16A810C1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift */,
+				F16A810C1DF95C4100C52347 /* BinarySearchArrayTests.swift */,
 				34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */,
 			);
 			name = tables;
@@ -246,7 +246,7 @@
 				F1A37E351DF861DB004864F9 /* SequentialSearchSymbolTable.swift in Sources */,
 				F135BF731DF76CE60076B34C /* OrderedSymbolTable.swift in Sources */,
 				F135BF561DF76CA70076B34C /* AppDelegate.swift in Sources */,
-				F16A810B1DF95A3B00C52347 /* BinarySearchSymbolTable.swift in Sources */,
+				F16A810B1DF95A3B00C52347 /* BinarySearchArray.swift in Sources */,
 				34A9272C1DFB0958009DB329 /* RedBlackTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +257,7 @@
 			files = (
 				F135BF661DF76CA70076B34C /* SymbolTablesTests.swift in Sources */,
 				34A9272E1DFB0A2E009DB329 /* RedBlackTreeTests.swift in Sources */,
-				F16A810D1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift in Sources */,
+				F16A810D1DF95C4100C52347 /* BinarySearchArrayTests.swift in Sources */,
 				F1A37E371DF86A2D004864F9 /* SequentialSearchSymbolTableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

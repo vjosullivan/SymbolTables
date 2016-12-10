@@ -1,5 +1,5 @@
 //
-//  BinarySearchSymbolTable.swift
+//  BinarySearchArray.swift
 //  SymbolTables
 //
 //  Created by Vincent O'Sullivan on 08/12/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BinarySearchSymbolTable: OrderedSymbolTable {
+class BinarySearchArray: OrderedSymbolTable {
 
     typealias Key = String
     typealias Value = Int
