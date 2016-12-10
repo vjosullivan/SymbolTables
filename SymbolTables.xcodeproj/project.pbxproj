@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A9272C1DFB0958009DB329 /* RedBlackTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9272B1DFB0958009DB329 /* RedBlackTree.swift */; };
+		34A9272E1DFB0A2E009DB329 /* RedBlackTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */; };
 		F135BF561DF76CA70076B34C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135BF551DF76CA70076B34C /* AppDelegate.swift */; };
 		F135BF581DF76CA70076B34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F135BF571DF76CA70076B34C /* Assets.xcassets */; };
 		F135BF5B1DF76CA70076B34C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F135BF591DF76CA70076B34C /* MainMenu.xib */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34A9272B1DFB0958009DB329 /* RedBlackTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBlackTree.swift; sourceTree = "<group>"; };
+		34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedBlackTreeTests.swift; sourceTree = "<group>"; };
 		F135BF521DF76CA70076B34C /* SymbolTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymbolTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F135BF551DF76CA70076B34C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F135BF571DF76CA70076B34C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				F135BF721DF76CE60076B34C /* SymbolTable.swift */,
 				F1A37E341DF861DB004864F9 /* SequentialSearchSymbolTable.swift */,
 				F16A810A1DF95A3B00C52347 /* BinarySearchSymbolTable.swift */,
+				34A9272B1DFB0958009DB329 /* RedBlackTree.swift */,
 			);
 			path = tables;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				F1A37E361DF86A2D004864F9 /* SequentialSearchSymbolTableTests.swift */,
 				F16A810C1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift */,
+				34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */,
 			);
 			name = tables;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				F135BF731DF76CE60076B34C /* OrderedSymbolTable.swift in Sources */,
 				F135BF561DF76CA70076B34C /* AppDelegate.swift in Sources */,
 				F16A810B1DF95A3B00C52347 /* BinarySearchSymbolTable.swift in Sources */,
+				34A9272C1DFB0958009DB329 /* RedBlackTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F135BF661DF76CA70076B34C /* SymbolTablesTests.swift in Sources */,
+				34A9272E1DFB0A2E009DB329 /* RedBlackTreeTests.swift in Sources */,
 				F16A810D1DF95C4100C52347 /* BinarySearchSymbolTableTests.swift in Sources */,
 				F1A37E371DF86A2D004864F9 /* SequentialSearchSymbolTableTests.swift in Sources */,
 			);
