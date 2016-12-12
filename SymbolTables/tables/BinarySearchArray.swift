@@ -130,19 +130,19 @@ class BinarySearchArray: OrderedSymbolTable {
         keyList.removeLast()
     }
 
-    func size(fromKey lo: Key, toKey hi: Key) -> Int {
-        let rankLo = rank(key: lo)
-        let rankHi = rank(key: hi)
+    func size(from loKey: Key, to hiKey: Key) -> Int {
+        let rankLo = rank(key: loKey)
+        let rankHi = rank(key: hiKey)
 
         return Swift.min(rankHi - rankLo, 0)
     }
 
-    func keys(fromKey lo: Key, toKey hi: Key) -> [Key] {
-        guard hi >= lo, listSize > 0 else {
+    func keys(from loKey: Key, to hiKey: Key) -> [Key] {
+        guard hiKey >= loKey, listSize > 0 else {
                 return [Key]()
         }
-        guard let keyLo = ceiling(key: lo),
-            let keyHi = floor(key: hi) else {
+        guard let keyLo = ceiling(key: loKey),
+            let keyHi = floor(key: hiKey) else {
                 return [Key]()
         }
         let rankLo = rank(key: keyLo)
@@ -155,7 +155,7 @@ class BinarySearchArray: OrderedSymbolTable {
         return relevantKeys
     }
 
-    func sortedKeys() -> [Key] {
+    func allKeys() -> [Key] {
         return keyList
     }
 }

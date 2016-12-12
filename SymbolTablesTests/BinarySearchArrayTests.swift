@@ -136,16 +136,16 @@ class BinarySearchArrayTests: XCTestCase {
                 symbolTable.put(key: word, value: 1)
             }
         }
-        XCTAssertEqual([], symbolTable.keys(fromKey: "A1", toKey: "A2"))
-        XCTAssertEqual(["B"], symbolTable.keys(fromKey: "A", toKey: "B"))
-        XCTAssertEqual(["B"], symbolTable.keys(fromKey: "A", toKey: "C"))
-        XCTAssertEqual(["B"], symbolTable.keys(fromKey: "B", toKey: "B"))
-        XCTAssertEqual(["B"], symbolTable.keys(fromKey: "B", toKey: "C"))
-        XCTAssertEqual([], symbolTable.keys(fromKey: "B1", toKey: "B2"))
-        XCTAssertEqual(["B", "D"], symbolTable.keys(fromKey: "A", toKey: "E"))
-        XCTAssertEqual(["B", "D", "F"], symbolTable.keys(fromKey: "A", toKey: "Z"))
-        XCTAssertEqual(["B", "D", "F"], symbolTable.keys(fromKey: "B", toKey: "F"))
-        XCTAssertEqual([], symbolTable.keys(fromKey: "Z1", toKey: "Z2"))
+        XCTAssertEqual([], symbolTable.keys(from: "A1", to: "A2"))
+        XCTAssertEqual(["B"], symbolTable.keys(from: "A", to: "B"))
+        XCTAssertEqual(["B"], symbolTable.keys(from: "A", to: "C"))
+        XCTAssertEqual(["B"], symbolTable.keys(from: "B", to: "B"))
+        XCTAssertEqual(["B"], symbolTable.keys(from: "B", to: "C"))
+        XCTAssertEqual([], symbolTable.keys(from: "B1", to: "B2"))
+        XCTAssertEqual(["B", "D"], symbolTable.keys(from: "A", to: "E"))
+        XCTAssertEqual(["B", "D", "F"], symbolTable.keys(from: "A", to: "Z"))
+        XCTAssertEqual(["B", "D", "F"], symbolTable.keys(from: "B", to: "F"))
+        XCTAssertEqual([], symbolTable.keys(from: "Z1", to: "Z2"))
     }
 
     func read(filename: String) -> [String] {

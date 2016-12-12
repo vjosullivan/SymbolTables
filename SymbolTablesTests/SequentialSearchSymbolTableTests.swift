@@ -21,7 +21,7 @@ class SequentialSearchSymbolTableTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        var value = 0
+//        var value = 0
 //        for key in keys {
 //            symbolTable.put(key: key, value: value)
 //            value += 1

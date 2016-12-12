@@ -300,6 +300,49 @@ class BinarySearchTreeTests: XCTestCase {
         print("\n\nTinyTale: Most frequent word with a minumum length of \(minimumLength): \(maxKey) (\(maxCount) times).\n\n")
     }
 
+    func testPrint() {
+        symbolTable.put(key: "D", value: 4)
+        symbolTable.put(key: "B", value: 2)
+        symbolTable.put(key: "C", value: 3)
+        symbolTable.put(key: "F", value: 6)
+        symbolTable.put(key: "A", value: 1)
+        symbolTable.put(key: "E", value: 5)
+        symbolTable.put(key: "G", value: 7)
+        symbolTable.printKeys()
+    }
+
+    func testAlKeysEmpty() {
+        XCTAssertEqual(0, symbolTable.keys().count)
+    }
+
+    func testAllKeys() {
+        symbolTable.put(key: "D", value: 4)
+        symbolTable.put(key: "B", value: 2)
+        symbolTable.put(key: "C", value: 3)
+        symbolTable.put(key: "A", value: 1)
+        symbolTable.put(key: "E", value: 5)
+        XCTAssertEqual(["A", "B", "C", "D", "E"], symbolTable.keys())
+    }
+    
+
+    func testKeyRange() {
+        symbolTable.put(key: "H", value: 8)
+        symbolTable.put(key: "D", value: 4)
+        symbolTable.put(key: "I", value: 9)
+        symbolTable.put(key: "B", value: 2)
+        symbolTable.put(key: "F", value: 6)
+        symbolTable.put(key: "A", value: 1)
+        symbolTable.put(key: "C", value: 3)
+        symbolTable.put(key: "E", value: 5)
+        symbolTable.put(key: "G", value: 7)
+        XCTAssertEqual(["A", "B", "C"], symbolTable.keys(from: "A", to: "C"))
+        XCTAssertEqual(["D", "E", "F"], symbolTable.keys(from: "D", to: "F"))
+        XCTAssertEqual(["E", "F", "G"], symbolTable.keys(from: "E", to: "G"))
+
+        XCTAssertEqual(["A", "B", "C"], symbolTable.keys(from: "11", to: "CC"))
+        XCTAssertEqual(["E", "F", "G"], symbolTable.keys(from: "DD", to: "G"))
+    }
+    
     func read(filename: String) -> [String] {
 
         let name = filename.components(separatedBy: ".")

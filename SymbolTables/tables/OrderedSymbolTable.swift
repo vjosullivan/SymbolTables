@@ -33,10 +33,8 @@ protocol OrderedSymbolTable: SymbolTable {
     func deleteMin()
     func deleteMax()
 
-    func size(fromKey lo: Key, toKey hi: Key) -> Int
-    func keys(fromKey lo: Key, toKey hi: Key) -> [Key]
-
-    func sortedKeys() -> [Key]
+    func size(from loKey: Key, to hiKey: Key) -> Int
+    func keys(from loKey: Key, to hiKey: Key) -> [Key]
 }
 
 extension OrderedSymbolTable {
@@ -56,9 +54,9 @@ extension OrderedSymbolTable {
     /// Returns the number of keys in the table between the two given keys (inclusive).
     /// If the "low" or "from" key is higher than the "high" or "to" key, `0` is returned.
     /// 
-    func size(fromKey lo: Key, toKey hi: Key) -> Int {
-        guard hi >= lo else { return 0 }
+    func size(from loKey: Key, to hiKey: Key) -> Int {
+        guard hiKey >= loKey else { return 0 }
 
-        return rank(key: hi) - rank(key: lo) + (contains(key: hi) ? 1 : 0)
+        return rank(key: hiKey) - rank(key: loKey) + (contains(key: hiKey) ? 1 : 0)
     }
 }

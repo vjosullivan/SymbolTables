@@ -74,11 +74,6 @@ class BinarySearchTree: OrderedSymbolTable {
         return root?.nodeCount ?? 0
     }
 
-    func keys() -> [Key] {
-        // TODO:
-        return [Key]()
-    }
-
     func min() -> Key? {
         guard let root = root else {
             return nil
@@ -251,14 +246,37 @@ class BinarySearchTree: OrderedSymbolTable {
         return node
     }
 
-    func keys(fromKey lo: Key, toKey hi: Key) -> [Key] {
-        // TODO:
-        return [Key]()
+    func keys(from minKey: Key, to maxKey: Key) -> [Key] {
+        var keyList = [Key]()
+        keyList.append(contentsOf: keys(node: root, minKey: minKey, maxKey: maxKey))
+        return keyList
     }
 
-    func sortedKeys() -> [Key] {
-        // TODO:
-        return [Key]()
+    private func keys(node: Node?, minKey: Key, maxKey: Key) -> [Key] {
+        var list = [Key]()
+        guard let node = node else { return list }
+        if node.key > minKey { list.append(contentsOf: keys(node: node.left, minKey: minKey, maxKey: maxKey)) }
+        if (node.key >= minKey && node.key <= maxKey) { list.append(node.key) }
+        if node.key < maxKey { list.append(contentsOf: keys(node: node.right, minKey: minKey, maxKey: maxKey)) }
+        return list
+    }
+
+    func keys() -> [Key] {
+        guard root != nil else { return [Key]() }
+
+        return keys(from: min()!, to: max()!)
+    }
+
+    func printKeys() {
+        printKeys(node: root)
+    }
+
+    private func printKeys(node: Node?) {
+        guard let node = node else { return }
+
+        printKeys(node: node.left)
+        print(node.key)
+        printKeys(node: node.right)
     }
 
     func clear() {

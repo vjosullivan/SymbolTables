@@ -63,12 +63,12 @@ class RedBlackTree: OrderedSymbolTable {
         return nil
     }
 
-    func keys(fromKey lo: Key, toKey hi: Key) -> [Key] {
+    func keys(from loKey: Key, to hiKey: Key) -> [Key] {
         // TODO:
         return [Key]()
     }
 
-    func sortedKeys() -> [Key] {
+    func allKeys() -> [Key] {
         // TODO:
         return [Key]()
     }
