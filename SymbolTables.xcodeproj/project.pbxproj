@@ -136,8 +136,8 @@
 			children = (
 				F1A37E361DF86A2D004864F9 /* SequentialSearchSymbolTableTests.swift */,
 				F16A810C1DF95C4100C52347 /* BinarySearchArrayTests.swift */,
-				34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */,
 				F1FE0ED11DFC398B005AB4CC /* BinarySearchTreeTests.swift */,
+				34A9272D1DFB0A2E009DB329 /* RedBlackTreeTests.swift */,
 			);
 			name = tables;
 			sourceTree = "<group>";
